@@ -1,13 +1,18 @@
 <?php 
 for ($i = 1; $i <= 100; $i++) {
     if ($i % 3 == 0 && $i % 5 == 0) {
-        echo "foobar,";
+        echo "foobar";
     } elseif ($i % 3 == 0) {
-        echo "foo,";
+        echo "foo";
     } elseif ($i % 5 == 0) {
-        echo "bar,";
+        echo "bar";
     } else {
-        echo $i . ",";
+        echo $i;
+    }
+
+    // remove final "," which is not required
+    if($i != 100) {
+        echo ",";
     }
 }
 ?>
