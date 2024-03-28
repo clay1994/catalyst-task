@@ -1,5 +1,9 @@
 <?php 
-for ($i = 1; $i <= 100; $i++) {
+
+// Set the default limit to 100 or use the provided limit
+$limit = isset($argv[1]) ? intval($argv[1]) : 100;
+
+for ($i = 1; $i <= $limit; $i++) {
     if ($i % 3 == 0 && $i % 5 == 0) {
         echo "foobar";
     } elseif ($i % 3 == 0) {
@@ -11,8 +15,8 @@ for ($i = 1; $i <= 100; $i++) {
     }
 
     // remove final "," which is not required
-    if($i != 100) {
+    if($i != $limit) {
         echo ",";
-    }
+    } 
 }
 ?>
